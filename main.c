@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     }
     //Kak da izveda vuvedenite veche elementi?
     int element_count = n*n;
-    printf("\n%x", a[i][j]);
+    printf("\n%x", a[i][j]); //Zashto izvejda samo adresa a ne sudurjanieto na i-tiya red i j-tiya stulb
 
     return (EXIT_SUCCESS);
 }
