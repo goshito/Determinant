@@ -26,13 +26,16 @@ int main(int argc, char** argv) {
     scanf("%d", &n);
     int a[n][n];
     
-    
+    //Vuvejdane na elementite; Samo v for tsikala li se zapomnyat???
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
             printf("\nVuvedi element a[%d][%d]=", i, j);
             scanf("%d", &a[i][j]);
         }
     }
+    //Kak da izveda vuvedenite veche elementi?
+    int element_count = n*n;
+    printf("\n%x", a[i][j]);
 
     return (EXIT_SUCCESS);
 }
