@@ -42,14 +42,19 @@ int main(int argc, char** argv) {
         printf ("\n");
     }
     
-    if (n = 2) {
+    if (n == 2) {
        determinant = ( a[0][0] * a[1][1] ) - ( a[0][1] * a [1][0] );
        printf("\nYou have entered a two line determinant and its value is: %d", determinant);
     }
     
-    if (n = 3) {
+    if (n == 3) {
        //Method of triangles or Sarus?
+       detereminant =  
        printf("\nYou have entered a determinant of third line and its value is: ");
+    }
+    
+    else {
+        //Calculate a determinant with random lines number 
     }
     
     return (EXIT_SUCCESS);
