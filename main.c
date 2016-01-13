@@ -34,9 +34,10 @@ int main(int argc, char** argv) {
         }
     }
     
+    printf("\nHere is your matrix:\n");
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
-            printf("%d ", a[i][j]);
+            printf("| %d | ", a[i][j]);
         }
         printf ("\n");
     }
@@ -46,13 +47,9 @@ int main(int argc, char** argv) {
        printf("\nYou have entered a two line determinant and its value is: %d", determinant);
     }
     
-    if (n > 3) {
+    if (n = 3) {
        //Method of triangles or Sarus?
-       printf("You have entered a determinant of third line and its value is: ");
-    }
-    
-    else {
-        //
+       printf("\nYou have entered a determinant of third line and its value is: ");
     }
     
     return (EXIT_SUCCESS);
