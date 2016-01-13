@@ -47,9 +47,14 @@ int main(int argc, char** argv) {
     }
     
     if (n > 3) {
+       //Method of triangles or Sarus?
        printf("You have entered a determinant of third line and its value is: ");
-    }    
-
+    }
+    
+    else {
+        //
+    }
+    
     return (EXIT_SUCCESS);
 }
 
