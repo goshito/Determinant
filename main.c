@@ -20,16 +20,12 @@
 int main(int argc, char** argv) {
         
     int i, j, n;
-    int determinanta;
+    int determinant;
     
     printf("\nEnter lines number: ");
     scanf("%d", &n);
     int a[n][n];
-    //Determine the way to solve the determinant depending on its number of lines
-    if (n > 3) {
-        //Must use adjugate matrix method
-    }    
-    
+
     //Filling the array with the values of the elements of the determinant.
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
@@ -37,14 +33,22 @@ int main(int argc, char** argv) {
             scanf("%d", &a[i][j]);
         }
     }
-    //Display the elements in table format.
+    
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
-            printf("a[%d][%d]=%d\t", i, j, a[i][j]);                      
+            printf("%d ", a[i][j]);
         }
-        printf("\n");
+        printf ("\n");
     }
     
+    if (n = 2) {
+       determinant = ( a[0][0] * a[1][1] ) - ( a[0][1] * a [1][0] );
+       printf("\nYou have entered a two line determinant and its value is: %d", determinant);
+    }
+    
+    if (n > 3) {
+       printf("You have entered a determinant of third line and its value is: ");
+    }    
 
     return (EXIT_SUCCESS);
 }
