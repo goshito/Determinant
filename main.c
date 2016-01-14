@@ -24,33 +24,33 @@ int main(int argc, char** argv) {
     
     printf("\nEnter lines number: ");
     scanf("%d", &n);
-    int a[n][n];
+    int element[n][n];
 
     //Filling the array with the values of the elements of the determinant.
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
             printf("\nEnter element a[%d][%d]=", i, j);
-            scanf("%d", &a[i][j]);
+            scanf("%d", &element[i][j]);
         }
     }
     
-    printf("\nHere is your matrix:\n");
+    printf("\nHere is your square matrix:\n\n");
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
-            printf("| %d | ", a[i][j]);
+            printf("| %d |", element[i][j]);
         }
         printf ("\n");
     }
     
     if (n == 2) {
-       determinant = ( a[0][0] * a[1][1] ) - ( a[0][1] * a [1][0] );
-       printf("\nYou have entered a two line determinant and its value is: %d", determinant);
+       determinant = ( element[0][0] * element[1][1] ) - ( element[0][1] * element[1][0] );
+       printf("\nYou have entered a two line square matrix and its determinant is: %d", determinant);
     }
     
     if (n == 3) {
        //Method of triangles or Sarus?
-       detereminant =  
-       printf("\nYou have entered a determinant of third line and its value is: ");
+       determinant = (element[0][0] * element [1][1] * element[2][2]) + (element[0][1] * element[1][2] * element[2][0]) + (element[0][2] * element[1][0] * element[2][1]) - (element[0][2] * element[1][1] * element[2][0]) - (element[0][0] * element[1][2] * element[2][1]) - (element[0][1] * element[1][0] * element[2][2]);
+       printf("\nYou have entered a determinant of third line and its value is: %d ", determinant);
     }
     
     else {
