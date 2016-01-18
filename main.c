@@ -73,6 +73,7 @@ int main(int argc, char** argv) {
     else {
         //Calculate a determinant with random lines number (process determinant by row or column)
         //Adyungirano kolichestvo
+        //
     }
     
     return (EXIT_SUCCESS);
