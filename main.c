@@ -23,6 +23,13 @@ void flush_input() {
     while ((ch = getchar()) != '\n' && ch != EOF);
 }
 
+int read_int() {
+    int result;
+    scanf("%d", &result);
+    flush_input();
+    return result;
+}
+
 int main(int argc, char** argv) {
         
     int i, j, n;
@@ -31,15 +38,16 @@ int main(int argc, char** argv) {
     
     printf("\nEnter lines number: ");
     scanf("%d", &n);
-    flush_input();
+    //flush_input();
     int element[n][n];
 
     //Filling the array with the values of the elements of the determinant.
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
-            printf("\nEnter element a[%d][%d]=", i, j);
-            scanf("%d", &element[i][j]);
-            flush_input();
+            printf("\nEnter element a[%d][%d] = ", i+1, j+1);
+            element[i][j] = read_int();
+            //scanf("%d", &element[i][j]);
+            //flush_input();
         }
     }
     
@@ -57,10 +65,13 @@ int main(int argc, char** argv) {
     }
     
     if (n == 3) {
-        //Flush buffer because scanf leaves a \n in the buffer
-        //flush_input();
-        //Method of triangles or Sarus?        
-        printf("\nPlease choose method to calculate determinant!\nEnter (t) for triangles or (s) for Sarus: ");       
+       //Flush buffer because scanf leaves a \n in the buffer
+       //flush_input();
+       //fflush(stdin); not working
+       //read_int();
+       
+       //Ask which methid for calculation to use        
+       printf("\nPlease choose method to calculate determinant!\nEnter (t) for triangles or (s) for Sarus: ");       
        c = getchar();
        if (c == 's') {
           determinant = (element[0][0] * element [1][1] * element[2][2]) + (element[0][1] * element[1][2] * element[2][0]) + (element[0][2] * element[1][0] * element[2][1]) - (element[0][2] * element[1][1] * element[2][0]) - (element[0][0] * element[1][2] * element[2][1]) - (element[0][1] * element[1][0] * element[2][2]); 
