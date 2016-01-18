@@ -31,6 +31,7 @@ int main(int argc, char** argv) {
     
     printf("\nEnter lines number: ");
     scanf("%d", &n);
+    flush_input();
     int element[n][n];
 
     //Filling the array with the values of the elements of the determinant.
@@ -57,7 +58,7 @@ int main(int argc, char** argv) {
     
     if (n == 3) {
         //Flush buffer because scanf leaves a \n in the buffer
-        flush_input();
+        //flush_input();
         //Method of triangles or Sarus?        
         printf("\nPlease choose method to calculate determinant!\nEnter (t) for triangles or (s) for Sarus: ");       
        c = getchar();
