@@ -49,8 +49,8 @@ int main(int argc, char** argv) {
     }
     
     if (n == 3) {
-       //Method of triangles or Sarus?
-       printf("Please choose method to calculate determinant!\nEnter (t) for triangles or (s) for Sarus: ");       
+       //Method of triangles or Sarus?        
+        printf("Please choose method to calculate determinant!\nEnter (t) for triangles or (s) for Sarus: ");       
        c = getchar(); //Zashto ne dava da se vuvedete simvol FLUSH INPUT???   
        if (c == 't') {
           determinant = (element[0][0] * element [1][1] * element[2][2]) + (element[0][1] * element[1][2] * element[2][0]) + (element[0][2] * element[1][0] * element[2][1]) - (element[0][2] * element[1][1] * element[2][0]) - (element[0][0] * element[1][2] * element[2][1]) - (element[0][1] * element[1][0] * element[2][2]); 
