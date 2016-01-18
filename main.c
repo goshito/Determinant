@@ -38,6 +38,7 @@ int main(int argc, char** argv) {
         for (j = 0; j < n; j++) {
             printf("\nEnter element a[%d][%d]=", i, j);
             scanf("%d", &element[i][j]);
+            flush_input();
         }
     }
     
@@ -51,23 +52,25 @@ int main(int argc, char** argv) {
     
     if (n == 2) {
        determinant = ( element[0][0] * element[1][1] ) - ( element[0][1] * element[1][0] );
-       printf("\nYou have entered a two line square matrix and its determinant is: %d", determinant);
+       printf("\nYou have entered a two line square matrix and its determinant is: %d", determinant); //Show how it's done!!!
     }
     
     if (n == 3) {
+        //Flush buffer because scanf leaves a \n in the buffer
         flush_input();
         //Method of triangles or Sarus?        
-        printf("Please choose method to calculate determinant!\nEnter (t) for triangles or (s) for Sarus: ");       
-       c = getchar(); //Zashto ne dava da se vuvedete simvol FLUSH INPUT??? 
-       printf("\n%d\n", c);
-       if (c == 't') {
+        printf("\nPlease choose method to calculate determinant!\nEnter (t) for triangles or (s) for Sarus: ");       
+       c = getchar();
+       if (c == 's') {
           determinant = (element[0][0] * element [1][1] * element[2][2]) + (element[0][1] * element[1][2] * element[2][0]) + (element[0][2] * element[1][0] * element[2][1]) - (element[0][2] * element[1][1] * element[2][0]) - (element[0][0] * element[1][2] * element[2][1]) - (element[0][1] * element[1][0] * element[2][2]); 
-          printf("Presmiatane po metoda na Sarus:\n%d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d = %d", element[0][0], element [1][1], element[2][2], element[0][1], element[1][2], element[2][0], element[0][2], element[1][0], element[2][1], element[0][2], element[1][1], element[2][0], element[0][0], element[1][2], element[2][1], element[0][1], element[1][0], element[2][2], determinant);
+          printf("\nSarus method calculation:\n%d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d = %d", element[0][0], element [1][1], element[2][2], element[0][1], element[1][2], element[2][0], element[0][2], element[1][0], element[2][1], element[0][2], element[1][1], element[2][0], element[0][0], element[1][2], element[2][1], element[0][1], element[1][0], element[2][2], determinant);
+       } else if (c == 't') {
+           printf("You have chosen triangles method");
        }
     }
     
     else {
-        //Calculate a determinant with random lines number(How the fuck??)
+        //Calculate a determinant with random lines number (process determinant by row or column)
         //Adyungirano kolichestvo
     }
     
