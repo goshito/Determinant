@@ -21,6 +21,7 @@ int main(int argc, char** argv) {
         
     int i, j, n;
     int determinant;
+    char m[1];
     
     printf("\nEnter lines number: ");
     scanf("%d", &n);
@@ -49,12 +50,18 @@ int main(int argc, char** argv) {
     
     if (n == 3) {
        //Method of triangles or Sarus?
-       determinant = (element[0][0] * element [1][1] * element[2][2]) + (element[0][1] * element[1][2] * element[2][0]) + (element[0][2] * element[1][0] * element[2][1]) - (element[0][2] * element[1][1] * element[2][0]) - (element[0][0] * element[1][2] * element[2][1]) - (element[0][1] * element[1][0] * element[2][2]);
-       printf("\nYou have entered a determinant of third line and its value is: %d ", determinant);
+       printf("Please choose method to calculate determinant!\nEnter (t) for triangles or (s) for Sarus: ");       
+       scanf("%s", m);
+       //m = getchar(); zashto ne dava da se vuvede nishto
+       if (m == "t") {
+          determinant = (element[0][0] * element [1][1] * element[2][2]) + (element[0][1] * element[1][2] * element[2][0]) + (element[0][2] * element[1][0] * element[2][1]) - (element[0][2] * element[1][1] * element[2][0]) - (element[0][0] * element[1][2] * element[2][1]) - (element[0][1] * element[1][0] * element[2][2]); 
+          printf("Presmiatane po metoda na Sarus:\n%d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d x %d = %d", element[0][0], element [1][1], element[2][2], element[0][1], element[1][2], element[2][0], element[0][2], element[1][0], element[2][1], element[0][2], element[1][1], element[2][0], element[0][0], element[1][2], element[2][1], element[0][1], element[1][0], element[2][2], determinant);
+       }
     }
     
     else {
-        //Calculate a determinant with random lines number 
+        //Calculate a determinant with random lines number(How the fuck??)
+        //Adyungirano kolichestvo
     }
     
     return (EXIT_SUCCESS);
