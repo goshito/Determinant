@@ -37,7 +37,8 @@ int main(int argc, char** argv) {
     char c;
     
     printf("\nEnter lines number: ");
-    scanf("%d", &n);
+    n = read_int();
+    //scanf("%d", &n);
     //flush_input();
     int element[n][n];
 
