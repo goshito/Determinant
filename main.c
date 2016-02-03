@@ -13,33 +13,17 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
-/*
- * 
- */
-
-void flush_input() {
-    int ch;
-    while ((ch = getchar()) != '\n' && ch != EOF);
-}
-
-int read_int() {
-    int result;
-    scanf("%d", &result);
-    flush_input();
-    return result;
-}
+#include "funcs.h"
 
 int main(int argc, char** argv) {
         
     int i, j, n;
     int determinant;
     char c;
-    // Ot kude go namerih tova read_int()
+    
     printf("\nEnter lines number: ");
     n = read_int();
-    //scanf("%d", &n);
-    //flush_input();
+    
     int element[n][n];
 
     //Filling the array with the values of the elements of the determinant.
@@ -52,14 +36,16 @@ int main(int argc, char** argv) {
         }
     }
     
-    printf("\nHere is your square matrix:\n\n");
+    printf("\nHere is the determinant you entered:\n\n");
+    diplay_determinant();
+    /*
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
             printf("| %d |", element[i][j]);
         }
         printf ("\n");
     }
-    
+    */
     if (n == 2) {
        determinant = ( element[0][0] * element[1][1] ) - ( element[0][1] * element[1][0] );
        printf("\nYou have entered a two line square matrix and its determinant is: %d", determinant); //Show how it's done!!!
