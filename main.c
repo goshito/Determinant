@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     int i, j, n;
     int determinant;
     char c;
-    
+    // Ot kude go namerih tova read_int()
     printf("\nEnter lines number: ");
     n = read_int();
     //scanf("%d", &n);
