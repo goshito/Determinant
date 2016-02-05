@@ -29,12 +29,12 @@ int read_int() {
     return result;
 }
 
-
-int main(int argc, char** argv) {
-        
     int i, j, n;
     int determinant;
     char c;
+
+int main(int argc, char** argv) {
+        
     
     printf("\nEnter lines number: ");
     n = read_int();
@@ -50,7 +50,7 @@ int main(int argc, char** argv) {
             //flush_input();
         }
     }
-    //Display the determinant
+    //Display the matrix
     printf("\nHere is the determinant you entered:\n\n");    
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
